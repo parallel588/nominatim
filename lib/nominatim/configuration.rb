@@ -21,7 +21,8 @@ module Nominatim
       :accept_language,
       :timeout,
       :search_url,
-      :reverse_url
+      :reverse_url,
+      :proxy
     ]
 
     attr_accessor *VALID_OPTIONS_KEYS

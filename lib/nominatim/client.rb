@@ -22,6 +22,8 @@ module Nominatim
         }
       }
 
+      options[:proxy] = Nominatim.config.proxy if Nominatim.config.proxy
+
       @connection = Faraday.new Nominatim.config.endpoint, options do |builder|
         builder.use Nominatim::Response::ParseJson
         builder.adapter Faraday.default_adapter
